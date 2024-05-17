@@ -1,0 +1,138 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PassTimeValidator</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">banking</a>
+</div>
+
+<h1>Coverage Summary for Class: PassTimeValidator (banking)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PassTimeValidator</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package banking;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;public class PassTimeValidator extends CommandValidator {
+<i class="no-highlight">4</i>&nbsp;	public PassTimeValidator(Bank bank) {
+<b class="fc"><i class="no-highlight">5</i>&nbsp;		super(bank);</b>
+<b class="fc"><i class="no-highlight">6</i>&nbsp;	}</b>
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;	@Override
+<i class="no-highlight">9</i>&nbsp;	public boolean validate(String command) {
+<b class="fc"><i class="no-highlight">10</i>&nbsp;		String[] tokenizedCommand = commandSplit(command);</b>
+<i class="no-highlight">11</i>&nbsp;		int timeToPass;
+<i class="no-highlight">12</i>&nbsp;
+<b class="fc"><i class="no-highlight">13</i>&nbsp;		if (!isValidCommandLength(tokenizedCommand, 2)) {</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;			return false;</b>
+<i class="no-highlight">15</i>&nbsp;		}
+<i class="no-highlight">16</i>&nbsp;
+<i class="no-highlight">17</i>&nbsp;		try {
+<b class="fc"><i class="no-highlight">18</i>&nbsp;			timeToPass = Integer.parseInt(tokenizedCommand[1]);</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;		} catch (NumberFormatException e) {</b>
+<b class="fc"><i class="no-highlight">20</i>&nbsp;			return false;</b>
+<b class="fc"><i class="no-highlight">21</i>&nbsp;		}</b>
+<i class="no-highlight">22</i>&nbsp;
+<b class="fc"><i class="no-highlight">23</i>&nbsp;		if (!isValidPassTime(timeToPass)) {</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;			return false;</b>
+<i class="no-highlight">25</i>&nbsp;		}
+<i class="no-highlight">26</i>&nbsp;
+<b class="fc"><i class="no-highlight">27</i>&nbsp;		return true;</b>
+<i class="no-highlight">28</i>&nbsp;	}
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;	private boolean isValidPassTime(int timeToPass) {
+<b class="fc"><i class="no-highlight">31</i>&nbsp;		return (timeToPass &gt;= 1) &amp;&amp; (timeToPass &lt;= 60);</b>
+<i class="no-highlight">32</i>&nbsp;	}
+<i class="no-highlight">33</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-10 17:58</div>
+</div>
+</body>
+</html>

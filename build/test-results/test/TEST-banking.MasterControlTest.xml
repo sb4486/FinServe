@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banking.MasterControlTest" tests="24" skipped="0" failures="0" errors="0" timestamp="2023-12-12T02:21:48" hostname="DEMON" time="0.146">
+  <properties/>
+  <testcase name="test_cd_account_withdraw_more_than_balance_after_12_months()" classname="banking.MasterControlTest" time="0.071"/>
+  <testcase name="sample_make_sure_this_passes_unchanged_or_you_will_fail()" classname="banking.MasterControlTest" time="0.007"/>
+  <testcase name="invalid_create_command()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="withdraw_savings()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="transfer_regular_test()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="unrecognized_parameters()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="withdraw_full_balance_cd_after_6_months_passed()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="withdraw_twice_in_one_month_fail_savings()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="withdraw_reset_test_cd()" classname="banking.MasterControlTest" time="0.008"/>
+  <testcase name="withdraw_partial_balance_cd_after_12_months_passed()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="test_creating_and_depositing_into_checking_account()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="test_savings_withdraw_twice_in_a_month()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="withdraw_more_than_balance_cd_after_12_months_passed()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="withdraw_savings_over_limit()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="test_cd_account_exact_withdraw_after_12_months()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="withdraw_cd()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="withdraw_partial_balance_cd_after_6_months_passed()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="test_transfer_between_checking_and_savings_then_withdrawing()" classname="banking.MasterControlTest" time="0.003"/>
+  <testcase name="unrecognized_command()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="withdraw_exact_balance_cd_after_12_months_passed()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="invalid_deposit_command()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="test_with_closing_savings_accounts_then_depositing_again()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="test_cd_account_less_withdrawal_after_12_months()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="invalid_create_commands()" classname="banking.MasterControlTest" time="0.001"/>
+  <system-out><![CDATA[[withdraw 12345678 100, withdraw 12345678 1800]
+[Cd 12345678 1631.32 2.10, withdraw 12345678 100, withdraw 12345678 1200]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
